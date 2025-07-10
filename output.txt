@@ -1,0 +1,145 @@
+➜  prediccion_cancelaciones_hoteles git:(main) ✗ python3               python3 proyecto_final_with_persistence.py
+
+¡Dataset 'hotel_booking.csv' cargado exitosamente en DataFrame!
+
+Información inicial del DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 119390 entries, 0 to 119389
+Data columns (total 36 columns):
+ #   Column                          Non-Null Count   Dtype  
+---  ------                          --------------   -----  
+ 0   hotel                           119390 non-null  object 
+ 1   is_canceled                     119390 non-null  int64  
+ 2   lead_time                       119390 non-null  int64  
+ 3   arrival_date_year               119390 non-null  int64  
+ 4   arrival_date_month              119390 non-null  object 
+ 5   arrival_date_week_number        119390 non-null  int64  
+ 6   arrival_date_day_of_month       119390 non-null  int64  
+ 7   stays_in_weekend_nights         119390 non-null  int64  
+ 8   stays_in_week_nights            119390 non-null  int64  
+ 9   adults                          119390 non-null  int64  
+ 10  children                        119386 non-null  float64
+ 11  babies                          119390 non-null  int64  
+ 12  meal                            119390 non-null  object 
+ 13  country                         118902 non-null  object 
+ 14  market_segment                  119390 non-null  object 
+ 15  distribution_channel            119390 non-null  object 
+ 16  is_repeated_guest               119390 non-null  int64  
+ 17  previous_cancellations          119390 non-null  int64  
+ 18  previous_bookings_not_canceled  119390 non-null  int64  
+ 19  reserved_room_type              119390 non-null  object 
+ 20  assigned_room_type              119390 non-null  object 
+ 21  booking_changes                 119390 non-null  int64  
+ 22  deposit_type                    119390 non-null  object 
+ 23  agent                           103050 non-null  float64
+ 24  company                         6797 non-null    float64
+ 25  days_in_waiting_list            119390 non-null  int64  
+ 26  customer_type                   119390 non-null  object 
+ 27  adr                             119390 non-null  float64
+ 28  required_car_parking_spaces     119390 non-null  int64  
+ 29  total_of_special_requests       119390 non-null  int64  
+ 30  reservation_status              119390 non-null  object 
+ 31  reservation_status_date         119390 non-null  object 
+ 32  name                            119390 non-null  object 
+ 33  email                           119390 non-null  object 
+ 34  phone-number                    119390 non-null  object 
+ 35  credit_card                     119390 non-null  object 
+dtypes: float64(4), int64(16), object(16)
+memory usage: 32.8+ MB
+
+
+Reduciendo el tamaño del dataset al 10.00% de las filas originales.
+Nuevo tamaño del dataset: 11939 filas.
+
+DataFrame después de la posible reducción de tamaño:
+               hotel  lead_time  ...  phone-number       credit_card
+30946   Resort Hotel        203  ...  530-703-7317  ************5253
+40207     City Hotel         82  ...  897-631-4121  ************3136
+103708    City Hotel         25  ...  341-353-2913  ************7754
+85144     City Hotel          1  ...  360-134-7604  ************5214
+109991    City Hotel         70  ...  698-685-4845  ************4766
+
+[5 rows x 35 columns]
+Distribución de la variable objetivo tras la reducción:
+is_canceled
+0    0.622163
+1    0.377837
+Name: proportion, dtype: float64
+
+Características numéricas identificadas: ['lead_time', 'arrival_date_year', 'arrival_date_week_number', 'arrival_date_day_of_month', 'stays_in_weekend_nights', 'stays_in_week_nights', 'adults', 'children', 'babies', 'is_repeated_guest', 'previous_cancellations', 'previous_bookings_not_canceled', 'booking_changes', 'agent', 'company', 'days_in_waiting_list', 'adr', 'required_car_parking_spaces', 'total_of_special_requests']
+Características categóricas identificadas: ['hotel', 'arrival_date_month', 'meal', 'country', 'market_segment', 'distribution_channel', 'reserved_room_type', 'assigned_room_type', 'deposit_type', 'customer_type', 'reservation_status', 'reservation_status_date', 'name', 'email', 'phone-number', 'credit_card']
+
+Se eliminaron 26 filas con 0 huéspedes en total.
+
+DataFrame tras limpieza y preprocesamiento inicial:
+          hotel  lead_time  ...  phone-number       credit_card
+0  Resort Hotel        203  ...  530-703-7317  ************5253
+1    City Hotel         82  ...  897-631-4121  ************3136
+2    City Hotel         25  ...  341-353-2913  ************7754
+3    City Hotel          1  ...  360-134-7604  ************5214
+4    City Hotel         70  ...  698-685-4845  ************4766
+
+[5 rows x 33 columns]
+Distribución de la variable objetivo:
+is_canceled
+0    0.62159
+1    0.37841
+Name: proportion, dtype: float64
+
+Características numéricas identificadas: ['lead_time', 'arrival_date_year', 'arrival_date_week_number', 'arrival_date_day_of_month', 'stays_in_weekend_nights', 'stays_in_week_nights', 'adults', 'children', 'babies', 'is_repeated_guest', 'previous_cancellations', 'previous_bookings_not_canceled', 'booking_changes', 'agent', 'company', 'days_in_waiting_list', 'adr', 'required_car_parking_spaces', 'total_of_special_requests']
+Características categóricas identificadas: ['hotel', 'arrival_date_month', 'meal', 'country', 'market_segment', 'distribution_channel', 'reserved_room_type', 'assigned_room_type', 'deposit_type', 'customer_type', 'name', 'email', 'phone-number', 'credit_card']
+
+🔧 Inicializando sistema de persistencia de modelos...
+
+--- Iniciando entrenamiento y guardado de modelos ---
+ Iniciando entrenamiento y guardado de modelos...
+
+ Entrenamiento completado. Sesión guardada: session_20250708_225029
+
+ Entrenamiento completado exitosamente!
+
+
+📊 RESUMEN DE RESULTADOS:
+--------------------------------------------------
+
+LogisticRegression:
+  F1-Score: 0.768 ± 0.023
+  AUC-ROC: 0.900 ± 0.017
+  Accuracy: 0.825
+  Precision: 0.769
+  Recall: 0.768
+
+KNN:
+  F1-Score: 0.744 ± 0.033
+  AUC-ROC: 0.880 ± 0.015
+  Accuracy: 0.814
+  Precision: 0.779
+  Recall: 0.712
+
+RandomForest:
+  F1-Score: 0.814 ± 0.014
+  AUC-ROC: 0.933 ± 0.014
+  Accuracy: 0.863
+  Precision: 0.838
+  Recall: 0.791
+
+MLP:
+  F1-Score: 0.733 ± 0.023
+  AUC-ROC: 0.892 ± 0.021
+  Accuracy: 0.813
+  Precision: 0.800
+  Recall: 0.677
+
+SVM:
+  F1-Score: 0.797 ± 0.016
+  AUC-ROC: 0.923 ± 0.013
+  Accuracy: 0.846
+  Precision: 0.797
+  Recall: 0.797
+
+MEJOR MODELO: RandomForest
+   F1-Score: 0.814
+
+ ¡Entrenamiento completado!
+
+--- Fin del análisis de modelos ---
