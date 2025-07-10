@@ -45,7 +45,7 @@ Este proyecto analiza datos históricos de reservaciones y desarrolla una **solu
    git clone https://github.com/Juanda16/prediccion_cancelaciones_hoteles.git
 
 2. **Instala las dependencias necesarias:**  
-   pip install -r requirements.txt
+   pip install -r requirements.txt o pip3 install -r requirements.txt
 
 ---
 
@@ -53,10 +53,10 @@ Este proyecto analiza datos históricos de reservaciones y desarrolla una **solu
 
 ```bash
 # Selección secuencial de características
-python scripts/seleccion_caracteristicas/seleccion_secuencial_robusta.py
+python/python3 scripts/seleccion_caracteristicas/seleccion_secuencial_robusta.py
 
 # Extracción PCA
-python scripts/extraccion_pca/extraccion_caracteristicas_pca_final.py
+python/python3 scripts/extraccion_pca/extraccion_caracteristicas_pca_final.py
 
 
 ## Uso 🚀 
