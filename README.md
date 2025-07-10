@@ -7,6 +7,7 @@ El objetivo es ayudar a los hoteles a anticipar cancelaciones y optimizar la ges
 
 ## 📑 **Tabla de Contenidos**
 - [Descripción](#descripción-📝)
+- [VIdeo Explicativo](#link-al-video-explicativo-video-de-presentación)
 - [Instalación](#instalación)
 - [Análisis Específicos](#análisis-específicos)
 - [Uso](#uso-🚀)
@@ -31,14 +32,6 @@ Este proyecto analiza datos históricos de reservaciones y desarrolla una **solu
 - **Aplicar** extracción de características mediante PCA
 - **Comparar** rendimiento con el estado del arte
 - **Desarrollar** una solución lista para implementación
-
-
-
-### 🎯 Mejor Modelo: **Random Forest**
-- **F1-Score**: 0.814 ± 0.014
-- **AUC-ROC**: 0.933 ± 0.014
-- **Precisión**: 0.838 ± 0.019
-- **Recall**: 0.791 ± 0.016
 
 ---
 
