@@ -81,8 +81,18 @@ python/python3 scripts/extraccion_pca/extraccion_caracteristicas_pca_final.py
 ## Metodología 🧠 
 
 - **Exploración de datos:** Análisis estadístico y visualización.
-- **Modelos utilizados:** Regresión logística, Random Forest, XGBoost.
-- **Evaluación:** Precisión, recall, matriz de confusión, ROC-AUC.
+- **Modelos utilizados:** Regresión logística, KNN, Random Forest, MLP, SVM.
+- **Selección de características:**
+  - Selección secuencial de características para reducir dimensionalidad.
+- **Extracción de características:**
+  - PCA para identificar componentes principales y reducir ruido.
+- **Entrenamiento y validación:**
+  - División de datos en conjuntos de entrenamiento y prueba.
+- **Hiperparámetros:** Búsqueda de hiperparámetros óptimos mediante validación cruzada.
+- **Evaluación de modelos:**
+  - Métricas de rendimiento: F1-Score, AUC-ROC, precisión, recall, accuracy.
+  - Comparación de modelos para seleccionar el mejor.
+
 
 ---
 
