@@ -57,10 +57,10 @@ _Asegúrate de tener el archivo de datos en la carpeta correspondiente._
 
 ```bash
 # Selección secuencial de características
-python/python3 scripts/seleccion_caracteristicas/seleccion_secuencial_robusta.py
+python/python3 seleccion_caracteristicas/seleccion_secuencial_robusta.py
 
 # Extracción PCA
-python/python3 scripts/extraccion_pca/extraccion_caracteristicas_pca_final.py
+python/python3 extraccion_pca/extraccion_caracteristicas_pca_final.py
 ```
 
 ---
