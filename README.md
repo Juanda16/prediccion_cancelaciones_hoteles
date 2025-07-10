@@ -6,20 +6,23 @@ El objetivo es ayudar a los hoteles a anticipar cancelaciones y optimizar la ges
 ---
 
 ## 📑 **Tabla de Contenidos**
-- [Descripción](#descripción)
+- [Descripción](#descripción-📝)
 - [Instalación](#instalación)
-- [Uso](#uso)
-- [Datos](#datos)
-- [Metodología](#metodología)
-- [Resultados](#resultados)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
+- [Análisis Específicos](#análisis-específicos)
+- [Uso](#uso-🚀)
+- [Datos](#datos-📊)
+- [Metodología](#metodología-🧠)
+- [Resultados](#resultados-📈)
+- [Contribuciones](#contribuciones-🤝)
+- [Licencia](#licencia-📝)
 
 ---
 
 ## Descripción 📝
 La predicción de cancelaciones es crucial para la industria hotelera.  
 Este proyecto analiza datos históricos de reservaciones y desarrolla una **solución integral de machine learning** para predecir cancelaciones de reservas hoteleras, implementando y comparando múltiples algoritmos con técnicas avanzadas de selección y extracción de características.
+
+## Link al video explicativo: [Video de presentación](https://drive.google.com/file/d/1GXIzq5xeMyxDU0jvkdIBEiI1gAH-m4Ng/view?usp=sharing)
 
 ### 🎯 Objetivos Principales
 
@@ -39,7 +42,7 @@ Este proyecto analiza datos históricos de reservaciones y desarrolla una **solu
 
 ---
 
-## Instalación ⚙️ 
+## Instalación
 
 1. **Clona este repositorio:**  
    git clone https://github.com/Juanda16/prediccion_cancelaciones_hoteles.git
@@ -48,8 +51,16 @@ Este proyecto analiza datos históricos de reservaciones y desarrolla una **solu
    pip install -r requirements.txt o pip3 install -r requirements.txt
 
 ---
+## Uso 🚀 
 
-### 3. **Análisis Específicos**
+Ejecuta el script principal para entrenar el modelo y hacer predicciones:  
+python analisis_modelos.py
+
+_Asegúrate de tener el archivo de datos en la carpeta correspondiente._
+
+---
+
+### Análisis Específicos
 
 ```bash
 # Selección secuencial de características
@@ -57,21 +68,20 @@ python/python3 scripts/seleccion_caracteristicas/seleccion_secuencial_robusta.py
 
 # Extracción PCA
 python/python3 scripts/extraccion_pca/extraccion_caracteristicas_pca_final.py
-
-
-## Uso 🚀 
-
-Ejecuta el script principal para entrenar el modelo y hacer predicciones:  
-python main.py
-
-_Asegúrate de tener el archivo de datos en la carpeta correspondiente._
+```
 
 ---
 
+
+
 ## Datos 📊 
 
-- **Fuente:** [Incluye aquí la fuente del dataset si es posible]
-- **Preprocesamiento:** Limpieza de datos, manejo de valores nulos y transformación de variables categóricas.
+- **Fuente:** [Kaggle - Hotel Booking Demand](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand)
+- **Preprocesamiento:** 
+  - Limpieza de datos
+  - Manejo de valores faltantes
+  - Codificación de variables categóricas
+  - Normalización de variables numéricas
 
 ---
 
